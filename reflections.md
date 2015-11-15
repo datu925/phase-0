@@ -43,3 +43,29 @@ Can you remember what each of the following does of the top of your head? Write 
 -help - for Unix, “man” is equivalent. Show the help or manual page for a particular command.
 
 #1.4 Forking and Cloning Reflection
+If you were going to write instructions for a new person on how to create a new repo, fork a repo, and clone a repo, what would they be? Why would you fork a repository as opposed to create a new one?
+
+Okay, here's what you do:
+
+Create a repo
+1. Sign up for a GitHub account.
+2. Once you have an account, hit the plus sign or look for instructions to add a new repository. There will be an options page which you should fill out according to your needs
+
+
+Fork a repo
+1. Find desired repo
+2. Hit the fork button in the upper-right corner.
+
+
+Clone a repo
+1. From a repo in your account, find the HTTPS Clone URL to the right (right above where it says, "Clone in Desktop."). Copy that URL
+2. Go to your command line and navigate to the folder you want to work in.
+3. Type "git clone [url]" and replace [url] with the URL you copied in step 1.
+
+I'd fork a repo if I wanted to build on someone else's code, of course! (and maybe make a pull request later if I felt like I'd done something worth incorporating). Forking creates a copy of someone else's repository on your account.
+
+
+
+What struggles did you have setting up git and GitHub? What did you learn in the process?
+
+I've worked with git and GitHub at least a bit before, so I didn't have a lot of struggles. I did learn how to use the command line interface more than I had previously, though - I usually would just use the desktop client or use the Clone to Desktop button. And it is helpful to have it re-explained so that some things sink in deeper than they had previously.
