@@ -16,9 +16,13 @@ That refers to the most recent commit (HEAD w/o the ^ is the current commit). So
 
 #What are the 3 stages of a git change and how do you move a file from one stage to the other?
 
-Git add, git commit, git
+I didn't actually see this in any of the material we were presented with, so I had to do some outside research (I think I found the right thing, but we'll see...). But could have just missed it.
+
+The three stages are modified, staged, and committed. You make changes to a file or add it; it's been modified, but git is not planning to do anything with it. If you use "git add ..." and name the file or the folder, you move it to the staged state, when git has not committed the file, but the file is planned to be committed during the next commit. And then by using "git commit ..." with either the -m or -v options and messages, you push it to the last step, when it is committed and now fully updated in your local repo.
 
 #Write a handy cheatsheet of the commands you need to commit your changes?
+
+This is a full list of everything involved throughout the entire process, including getting your code up to GitHub. That was my reading of the question, though if this question is really only about the commit process it'll be a subset of the following commands.
 
 git pull origin master (make sure you have correct version of master)
 git checkout -b new_branch (make a new branch to work on)
