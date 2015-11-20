@@ -1,5 +1,5 @@
-![That is a sweet wireframe, you might say](/week-2/imgs/wireframe-index.png)
-![ROUND!](/week-2/imgs/wireframe-blog-index.png)
+![That is a sweet wireframe, you might say](./imgs/wireframe-index.png)
+![ROUND!](./imgs/wireframe-blog-index.png)
 
 ##What is a wireframe?
 
