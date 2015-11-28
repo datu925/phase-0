@@ -1,12 +1,12 @@
-![img-1](./imgs/3.4.1)
-![img-2](./imgs/3.4.2)
-![img-3](./imgs/3.4.3)
-![img-4](./imgs/3.4.4)
-![img-5](./imgs/3.4.5)
-![img-6](./imgs/3.4.6)
-![img-7](./imgs/3.4.7)
-![img-8](./imgs/3.4.8)
-![img-9](./imgs/3.4.9)
+![img-1](./imgs/3.4.1.png)
+![img-2](./imgs/3.4.2.png)
+![img-3](./imgs/3.4.3.png)
+![img-4](./imgs/3.4.4.png)
+![img-5](./imgs/3.4.5.png)
+![img-6](./imgs/3.4.6.png)
+![img-7](./imgs/3.4.7.png)
+![img-8](./imgs/3.4.8.png)
+![img-9](./imgs/3.4.9.png)
 
 #How can you use Chrome's DevTools inspector to help you format or position elements?
 
