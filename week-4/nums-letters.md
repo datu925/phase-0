@@ -24,6 +24,12 @@ Minutes in a decade:
 60 * 24 * 365 * 10
 ```
 
+#Release 5
+
+[Defining Variables](https://github.com/datu925/phase-0/blob/master/week-4/defining-variables.rb)
+[Simple String](https://github.com/datu925/phase-0/blob/master/week-4/simple-string.rb)
+[Local Variables and Basic Arithmetical Expressions](https://github.com/datu925/phase-0/blob/master/week-4/basic-math.rb)
+
 #Release 7
 
 ##How does Ruby handle addition, subtraction, multiplication, and division of numbers?
@@ -49,3 +55,6 @@ Local variables are those used in a particular method or subroutine (as opposed 
 ##How was this challenge? Did you get a good review of some of the basics?
 
 Sorry, I thought it was not engaging enough. I learned basic Ruby prior to DBC and so the interview was my refresher course. I wish there were more opportunities to go deeper.
+
+
+See links above in release 5 to see the sub-challenges.
