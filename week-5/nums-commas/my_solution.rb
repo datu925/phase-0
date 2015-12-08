@@ -25,12 +25,12 @@
 # and it may be even simpler if you could reverse the array before you loop through it so you can iterate forward instead
 
 # Steps
-# Convert integer to string, split to an array of individual digit characters, and reverse it
-# Initialize output string
-# Traverse the original array. You can also use something like each_with_index. For each element/index:
-# => Add the current digit to the output string at the beginning
-# => Add a comma to beginning as well IF current-index == 2 mod 3
-# Once we're done, if output string starts with a comma, remove it, and return output string
+# Reverse the number so that the first digit is last and last, first
+# Start tracking an output number
+# Move from the left/beginning over the reversed number to the right. For each digit:
+# => Add the current digit to the output number at the beginning
+# => Add a comma to the beginning as well IF the digit number (e.g. first, second, etc.) == 2 mod 3
+# Once you're done, if output number starts with a comma, remove it, and return output number
 
 # 1. Initial Solution
 
