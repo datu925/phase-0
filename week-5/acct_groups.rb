@@ -7,10 +7,31 @@
 # Option 2:
 # Let n = number of people.
 # Let n / 4 (integer division) = number of groups. We'll call it g. This will ensure no group has < 3 people or >5.
-# Initialize output array containing g empty arrays
+# Initialize output list of names containing g empty groups or pods
 # While list of names isn't empty
 # => Randomly choose a name. We'll do this by picking number from 0 to input array length - 1. That's the index of the name we'll pick.
-# => Remove them from the input array
-# => Put them in the next available slot in the output array. To do this, we'll count up from 0 to g-1 with each name chosen so that each time it picks a different pod
-# Return output array
+# => Remove them from the input list of names
+# => Put them in the next available slot in the output list of names. To do this, we'll count up from 0 to g-1 with each number corresponding to a different pod
+# Return output list of names
 
+def accountability_groups(names)
+
+  num_names = names.length
+  num_groups = num_names / 4
+  output = []
+  num_groups.times { |x| output << []}
+
+  group_count = 0
+
+  while names.length != 0
+    random_choice = rand(names.length)
+    current_name = names[random_choice]
+    names.delete_at(random_choice)
+
+    output[group_count] << current_name
+    group_count = (group_count + 1) % num_groups
+  end
+
+  return output
+
+end
