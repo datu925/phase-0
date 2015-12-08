@@ -26,10 +26,10 @@
 
 # Steps
 # Convert integer to string, split to an array of individual digit characters, and reverse it
-# Initialize output string as ""
-# Beginning at 0 and ending at array.length-1, transverse the original array. You can also use something like each_with_index. For each element/index:
-# => Add the current digit to the output string at the end
-# => Add a comma to end as well IF current-index == 2 mod 3
+# Initialize output string
+# Traverse the original array. You can also use something like each_with_index. For each element/index:
+# => Add the current digit to the output string at the beginning
+# => Add a comma to beginning as well IF current-index == 2 mod 3
 # Once we're done, if output string starts with a comma, remove it, and return output string
 
 # 1. Initial Solution
