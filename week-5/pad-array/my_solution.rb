@@ -1,6 +1,6 @@
 # Pad an Array
 
-# I worked on this challenge with Jillian. ]
+# I worked on this challenge with Jillian.
 
 # I spent 1.5 hours on this challenge.
 
