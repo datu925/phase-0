@@ -6,9 +6,13 @@
 
 # Pseudocode
 
-# Input:
-# Output:
+# Input: a name
+# Output: a string printing a greeting to that name
 # Steps:
+
+# Get name from user; this should be an argument to Greetings
+# Create a namedata instance to store the name in
+# Print string with name in it using reader on namedata instance
 
 class NameData
 
