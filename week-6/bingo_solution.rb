@@ -1,6 +1,6 @@
 # A Nested Array to Model a Bingo Board SOLO CHALLENGE
 
-# I spent [#] hours on this challenge.
+# I spent 2.5 hours on this challenge.
 
 
 # Release 0: Pseudocode
@@ -75,32 +75,56 @@ Print to screen (pretty formatting TBD)
 
 class BingoBoard
 
-
+  attr_accessor :board, :game_name, :name_array
 
   def initialize(board)
-    @bingo_board = board
+    @board = board
+    @game_name = "BINGO" #if we would rather play with another five-letter word like "DINGO"
+    @name_array = game_name.split("")
   end
+
+  # def column_values(number)
+  #   board.inject([]) { |arr, row| arr << row[number] }
+  # end
+
+  Call = Struct.new(:letter, :number)
 
   def call
     rando = Random.new
-    letter = ["B","I","N","G","O"].sample
+    letter = name_array.sample
     number = rando.rand(1..100)
-    return [letter,number]
+    Call.new(letter, number)
   end
 
   def check(letter, number)
-    col = ["B","I","N","G","O"].index(letter)
-    @bingo_board.each do |arr|
-      if arr[col] == number
-        arr[col] = 'X'
-        break
+    if name_array.include?(letter) == false
+      raise ArgumentError.new("Letter does not exist in this game.")
+    end
+
+    col_number = name_array.index(letter)
+
+    board.each do |row|
+      if row[col_number] == number
+        row[col_number] = 'X'
       end
     end
+
+    # I considered a different approach that ultimately felt like too much work for the particular challenge here, but am leaving it below anyway
+
+    # if column_values(col_number).include?(call_number)
+    #   row_number = column_values(col_number).index(call_number)
+    #   board[row_number][col_number] = "X"
+    # end
   end
 
-  def print
-    @bingo_board.each do |row|
-      p row
+  def print_pretty
+      printf("|%3s%4s%4s%4s%4s |\n", *name_array)
+    board.each do |row|
+      print("|")
+      row.each do |num|
+        printf(" %2s ", num)
+      end
+      print("|\n")
     end
   end
 
@@ -115,10 +139,30 @@ board = [[47, 44, 71, 8, 88],
 
 new_game = BingoBoard.new(board)
 
-random_call = new_game.call()
-new_game.check(random_call[0], random_call[1])
-new_game.print
+random_call = new_game.call
+new_game.check(random_call.letter, random_call.number)
+new_game.check("B", 47)
+new_game.check("N", 54)
+new_game.print_pretty
 
+
+#optional - true bingo board
+
+def true_bingo_board
+  board = []
+  5.times { |x| board << []}
+  rando = Random.new
+
+  board.each { |row|
+    5.times { |count|
+      low_bound = 15 * count + 1
+      high_bound = 15 * (count + 1)
+      row << rando.rand(low_bound..high_bound)
+    }
+  }
+
+  board
+end
 
 #Reflection
 
@@ -138,13 +182,18 @@ You could use multiple brackets (e.g. array[0][1]), or you can iterate once or t
 
 What methods did you use to access and modify the array?
 
-First time through, I just used reassignment. Though a setter would make sense.
+I just used each and variable reassignment to modify.
 
 Give an example of a new method you learned while reviewing the Ruby docs. Based on what you see in the docs, what purpose does it serve, and how is it called?
+
+This isn't a method exactly, but I dug more into Structs. I felt like the call number was challenging because while it's easy to just pass it on as an array, now we are dependent on the knowledge of the data structure. Even though the Struct is new and adds some complexity, I feel like it's more in keeping with the principles of object-oriented design - we are returning a thing that responds to letter and a number, rather than an array where you need to know what [0] and [1] correspond to.
+
 How did you determine what should be an instance variable versus a local variable?
 
-
+If you only need it for a particular method, go local. Otherwise if you are likely to reference across methods, go instance.
 
 What do you feel is most improved in your refactored solution?
+
+As noted above, I think the struct thing is cool. I also made it so you can rename your bingo game to any five-letter word, which is totally useless but kinda fun.
 
 =end
