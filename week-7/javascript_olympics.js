@@ -110,6 +110,6 @@ Constructor functions are class-like - they let you define properties and method
 
 How are constructors different from Ruby classes (in your research)?
 
-JS constructors do actually inherit from functions (whereas Ruby classes inherit from objects), and JS syntax is obviously different, particularly regarding the word 'this'. JS constructors also seem to be related to prototypes.
+JS constructors do actually inherit from functions (whereas Ruby classes inherit from objects), and JS syntax is obviously different, particularly regarding the word 'this'. Based on early research, JS is a bit harder to understand, and constructors don't do as much by default as classes in Ruby, but they are also more flexible.
 
 */
