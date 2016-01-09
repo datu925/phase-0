@@ -37,7 +37,7 @@ sqlite> SELECT regions.region_name, states.state_name
 
 Release 6:
 
-![schema-designer][schema.png]
+![schema-designer](schema.png)
 
 
 Release 7:
