@@ -46,6 +46,49 @@ FOR each item in items list
 
 // INITIAL SOLUTION
 
+// function GroceryList(owner, items) {
+
+//   this.owner = owner;
+//   this.items = items;
+
+//   this.add = function(item, quantity) {
+//     if (this.items[item] == undefined) {
+//       items[item] = quantity;
+//     } else {
+//       console.log(item + " is already in the grocery list! Use update instead.")
+//     }
+//   }
+
+//   this.remove = function(item) {
+//     if (this.items[item] == undefined) {
+//       console.log(item + " is not in grocery list; cannot remove.")
+//     } else {
+//       delete this.items[item];
+//     }
+//   }
+
+//   this.update = function(item, quantity) {
+//     if (this.items[item] == undefined) {
+//       console.log(item + " is not in grocery list; please add it first.")
+//     } else {
+//       this.items[item] = quantity;
+//     }
+//   }
+
+//   this.print = function() {
+//     console.log(this.owner + "'s list");
+//     console.log("====================");
+//     for (var item in this.items) {
+//       console.log(item + ": " + this.items[item]);
+//     }
+//     console.log("\n")
+//   }
+
+
+// }
+
+// REFACTORED SOLUTION
+
 function GroceryList(owner, items) {
 
   this.owner = owner || "N/A";
@@ -76,19 +119,18 @@ function GroceryList(owner, items) {
   }
 
   this.print = function() {
+    console.log("\n");
+    console.log("====================");
     console.log(this.owner + "'s list");
     console.log("====================");
     for (var item in this.items) {
       console.log(item + ": " + this.items[item]);
     }
-    console.log("\n")
+    console.log("\n");
   }
 
 
 }
-
-// REFACTORED SOLUTION
-
 
 
 
@@ -100,6 +142,7 @@ var my_grocery_list = new GroceryList("Dan", {
 
 my_grocery_list.print();
 my_grocery_list.add("peppers",15);
+my_grocery_list.add("peppers",10);
 my_grocery_list.remove("tomatoes");
 my_grocery_list.update("rutabegas",4);
 my_grocery_list.print();
